@@ -15,6 +15,19 @@ This is a NestJS project that provides an API to retrieve movie data by title. T
 - PostgreSQL database
 - The Redis server is running
 
+## Settings
+
+Configure constants in the script
+
+```bash
+recovery-db.sh
+```
+
+Creating an .env file from an .env.example file:
+
+```bash
+cp .env.example .env
+```
 
 ## Installation
 
@@ -35,25 +48,11 @@ cd film-cache-app
 ```bash
 install npm
 ```
-in
+
 4. Start the container:
 
 ```bash
 docker-compose up -d
-```
-
-## Settings
-
-Configure constants in the stronghold
-
-```bash
-recovery-db.sh
-```
-
-Creating an .env file from an .env.example file:
-
-```bash
-cp .env.example .env
 ```
 
 5. Run the bd copy script:
@@ -69,7 +68,6 @@ To run the program, execute the command:
 
 ```bash
 npm run start:dev
-
 ```
 
 ## Endpoints
