@@ -1,6 +1,9 @@
+version: '3.8'
+
 services:
   postgres:
-    image: postgres
+    image: postgres:latest
+    container_name: "postgres"
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -8,12 +11,13 @@ services:
     ports:
       - '${POSTGRES_PORT}:5432'
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data-db
     networks:
       - film-cache-app
 
   redis:
     image: redis
+    container_name: "redis"
     ports:
       - '${REDIS_PORT}:6379'
     networks:
