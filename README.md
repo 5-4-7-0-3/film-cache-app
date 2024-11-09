@@ -17,7 +17,7 @@ This is a NestJS project that provides an API to retrieve movie data by title. T
 
 ## Settings
 
-Configure constants in the script
+Configure constants in the script:
 
 ```bash
 recovery-db.sh
